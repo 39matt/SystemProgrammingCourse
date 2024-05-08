@@ -106,7 +106,7 @@ namespace OpenWeatherMapAPI
             int count = 0;
             foreach (var info in infos)
             {
-                var content = $"City: {info.City}\nWeather: {info.Weather}\nDescription: {info.Description}\nTemperature: {info.Temperature}\n";
+                var content = $"City: {info.City}\nWeather: {info.Weather}\nDescription: {info.Description}\n";
                 WriteToCache(count++, content);
             }
         }

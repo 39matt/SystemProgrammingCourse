@@ -3,8 +3,19 @@ using System;
 using System.Diagnostics;
 using System.IO;
 
-string query = "London";
+string city = "Sydney";
+string days = "7";
 Stopwatch stopwatch = new Stopwatch();
 stopwatch.Start();
 
-WeatherInfo list = await WeatherSearchService.FetchWeatherInfo(query);
+var response = await WeatherSearchService.FetchWeatherInfoAsync(city,days);
+Console.WriteLine(city);
+Console.WriteLine("------------------------------");
+foreach (var item in response)
+{
+    Console.WriteLine($"Vreme: {item.Time}");
+    Console.WriteLine($"Min: {item.TempMax}");
+    Console.WriteLine($"Max: {item.TempMin}");
+}
+stopwatch.Stop();
+Console.WriteLine(stopwatch.ElapsedMilliseconds + " ms");
