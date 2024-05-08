@@ -1,11 +1,10 @@
-﻿using System;
+﻿using OpenWeatherMapAPI;
+using System;
 using System.Diagnostics;
 using System.IO;
-class Program
-{
-    static void Main(string[] args)
-    {
-        Stopwatch stopwatch = new Stopwatch();
-        Console.WriteLine("Glavna nit...");
-    }
-}
+
+string query = "London";
+Stopwatch stopwatch = new Stopwatch();
+stopwatch.Start();
+
+WeatherInfo list = await WeatherSearchService.FetchWeatherInfo(query);
