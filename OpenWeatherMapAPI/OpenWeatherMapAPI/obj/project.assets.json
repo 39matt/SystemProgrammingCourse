@@ -1,0 +1,68 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net8.0": []
+  },
+  "packageFolders": {
+    "C:\\Users\\matij\\.nuget\\packages\\": {},
+    "D:\\Installations\\VS 2022\\Shared components, tools and SDKs\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\matij\\OneDrive - Faculty of Electronic Engineering\\Sve\\Faks\\VI semestar\\Sistemsko programiranje\\OpenWeatherMapAPI\\OpenWeatherMapAPI\\OpenWeatherMapAPI.csproj",
+      "projectName": "OpenWeatherMapAPI",
+      "projectPath": "C:\\Users\\matij\\OneDrive - Faculty of Electronic Engineering\\Sve\\Faks\\VI semestar\\Sistemsko programiranje\\OpenWeatherMapAPI\\OpenWeatherMapAPI\\OpenWeatherMapAPI.csproj",
+      "packagesPath": "C:\\Users\\matij\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\matij\\OneDrive - Faculty of Electronic Engineering\\Sve\\Faks\\VI semestar\\Sistemsko programiranje\\OpenWeatherMapAPI\\OpenWeatherMapAPI\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Installations\\VS 2022\\Shared components, tools and SDKs\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\matij\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
