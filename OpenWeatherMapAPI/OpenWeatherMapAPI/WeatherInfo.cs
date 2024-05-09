@@ -19,6 +19,9 @@ namespace OpenWeatherMapAPI
         public double WindSpeed { get; set; }
         public int WindDirection { get; set; }
         public int Cloudiness { get; set; }
-        public double Rain { get;set; }
+        public override string ToString()
+        {
+            return $"--------------------------------\nTime: {Time}\n---------------------------\nCity: {City}\nTempMin: {TempMin} C\nTempMax: {TempMax} C\nWeather: {Weather}\nDescription: {Description}\nPressure: {Pressure} hPa\nHumidity: {Humidity}%\nWindSpeed: {WindSpeed}m/s\nWindDirection: {WindDirection}\nCloudiness: {Cloudiness}%\n";
+        }
     }
 }

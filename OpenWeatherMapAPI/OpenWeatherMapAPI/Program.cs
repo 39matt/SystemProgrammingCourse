@@ -3,19 +3,9 @@ using System;
 using System.Diagnostics;
 using System.IO;
 
-string city = "Sydney";
-string days = "7";
-Stopwatch stopwatch = new Stopwatch();
-stopwatch.Start();
-
-var response = await WeatherSearchService.FetchWeatherInfoAsync(city,days);
-Console.WriteLine(city);
-Console.WriteLine("------------------------------");
-foreach (var item in response)
-{
-    Console.WriteLine($"Vreme: {item.Time}");
-    Console.WriteLine($"Min: {item.TempMax}");
-    Console.WriteLine($"Max: {item.TempMin}");
-}
-stopwatch.Stop();
-Console.WriteLine(stopwatch.ElapsedMilliseconds + " ms");
+var server = new HTTPServer();
+server.Start();
+Console.WriteLine("Press Enter to stop the server...");
+while (Console.ReadKey().Key != ConsoleKey.Enter)
+    server.Stop();
+Console.WriteLine("Server stopped!");
