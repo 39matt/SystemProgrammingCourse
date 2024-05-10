@@ -43,30 +43,7 @@ namespace OpenWeatherMapAPI
                     w.Cloudiness = (int)item["clouds"]["all"];
                     forecast.Add(w);
                 }
-                //var w = new WeatherInfo();
-                //w.Time = jsonObject["list"][0]["dt_txt"].ToString();
-                //w.TempMin = Math.Round((double)jsonObject["list"][0]["main"]["temp_min"] - 270, 0);
-                //w.TempMax = Math.Round((double)jsonObject["list"][0]["main"]["temp_max"] - 270, 0);
-                //w.Weather = (string)jsonObject["list"][0]["weather"][0]["main"];
-                //w.Description = (string)jsonObject["list"][0]["weather"][0]["description"];
-                //w.Pressure = (double)jsonObject["list"][0]["main"]["pressure"];
-                //w.Humidity = (int)jsonObject["list"][0]["main"]["humidity"];
-                //w.WindSpeed = (double)jsonObject["list"][0]["wind"]["speed"];
-                //w.WindDirection = (int)jsonObject["list"][0]["wind"]["deg"];
-                //w.Cloudiness = (int)jsonObject["list"][0]["clouds"]["all"];
-                //var forecast = jsonObject["list"][0].Select(x => new WeatherInfo
-                //{
-                //    Time = x["dt_txt"].ToString(),
-                //    TempMin = Math.Round((double)x["main"]["temp_min"] - 270, 0),
-                //    TempMax = Math.Round((double)x["main"]["temp_max"] - 270, 0),
-                //    Weather = (string)x["weather"][0]["main"],
-                //    Description = (string)x["weather"][0]["description"],
-                //    Pressure = (double)x["main"]["pressure"],
-                //    Humidity = (int)x["main"]["humidity"],
-                //    WindSpeed = (double)x["wind"]["speed"],
-                //    WindDirection = (int)x["wind"]["deg"],
-                //    Cloudiness = (int)x["clouds"]["all"]
-                //}).ToList();
+                
                 return forecast;
             }
             catch (Exception e)

@@ -16,3 +16,21 @@ C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.pdb
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.genruntimeconfig.cache
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\ref\OpenWeatherMapAPI.dll
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\bin\Debug\net8.0\OpenWeatherMapAPI.exe
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\bin\Debug\net8.0\OpenWeatherMapAPI.deps.json
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\bin\Debug\net8.0\OpenWeatherMapAPI.runtimeconfig.json
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\bin\Debug\net8.0\OpenWeatherMapAPI.dll
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\bin\Debug\net8.0\OpenWeatherMapAPI.pdb
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.csproj.AssemblyReference.cache
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.AssemblyInfoInputs.cache
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.AssemblyInfo.cs
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.csproj.CoreCompileInputs.cache
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.sourcelink.json
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.csproj.CopyComplete
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.dll
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\refint\OpenWeatherMapAPI.dll
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.pdb
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.genruntimeconfig.cache
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\ref\OpenWeatherMapAPI.dll

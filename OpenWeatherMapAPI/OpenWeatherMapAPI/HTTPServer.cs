@@ -122,7 +122,7 @@ namespace OpenWeatherMapAPI
             _httpListener.Start();
             _listenerThread.Start();
             _running = true;
-            Console.WriteLine("Server started!");
+            Console.WriteLine("Server pokrenut!");
         }
 
         public void Stop()
@@ -130,7 +130,7 @@ namespace OpenWeatherMapAPI
             _httpListener.Stop();
             _listenerThread.Join();
             _running = false;
-            Console.WriteLine("Server stopped!");
+            Console.WriteLine("Server zaustavljen!");
         }
 
         private void Listen()
@@ -151,7 +151,7 @@ namespace OpenWeatherMapAPI
                 }
                 catch (HttpListenerException)
                 {
-                    Console.WriteLine("Server stopped listening!");
+                    Console.WriteLine("Server prestaje sa slusanjem!");
                 }
             }
         }
