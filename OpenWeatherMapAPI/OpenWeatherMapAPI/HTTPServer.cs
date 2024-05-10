@@ -9,12 +9,14 @@ namespace OpenWeatherMapAPI
 {
     internal class HTTPServer
     {
+        private readonly Cache _cache;
         private readonly HttpListener _httpListener;
         private readonly Thread _listenerThread;
         private bool _running;
 
         public HTTPServer()
         {
+            _cache = new();
             _httpListener = new HttpListener();
             _httpListener.Prefixes.Add($"http://localhost:5050/");
             _listenerThread = new Thread(Listen);
@@ -66,20 +68,43 @@ namespace OpenWeatherMapAPI
                     SendResponse(context, "City can only contain letters!"u8.ToArray(), "text/plain", HttpStatusCode.UnprocessableContent);
                     return;
                 }
-
-                List<WeatherInfo> weatherInfos = WeatherSearchService.FetchWeatherInfo(city, days);
-                if (weatherInfos == null)
+                List<WeatherInfo> weatherInfo;
+                string allInfos = "";
+                if (_cache.ContainsKey(city))
                 {
-                    SendResponse(context, "API returned an error!"u8.ToArray(), "text/plain", HttpStatusCode.InternalServerError);
+                    if(Convert.ToInt32(days) > _cache.GetFromCache(city).Count)
+                    {
+                        weatherInfo = WeatherSearchService.FetchWeatherInfo(city, days);
+                        allInfos = $"First {_cache.GetFromCache(city).Count} days from cache and others added to cache\n";
+                        _cache.AddToCache(city, weatherInfo);
+                    }
+                    else
+                    {
+                        weatherInfo = _cache.GetFromCache(city);
+                        //byte[] dataAsBytess = System.Text.Encoding.UTF8.GetBytes(weatherInfo.ToString());
+                        //SendResponse(context, dataAsBytess, "text/plain");
+                        Console.WriteLine("Data from cache sent!");
+                        allInfos = "Data from cache!\n";
+                    }
                 }
-                if (weatherInfos!.Count == 0)
+                else
                 {
-                    SendResponse(context, "No data for given name and surname found!"u8.ToArray(), "text/plain", HttpStatusCode.NoContent);
-                    return;
+                    weatherInfo = WeatherSearchService.FetchWeatherInfo(city, days);
+                    if (weatherInfo == null)
+                    {
+                        SendResponse(context, "API returned an error!"u8.ToArray(), "text/plain", HttpStatusCode.InternalServerError);
+                    }
+                    if (weatherInfo!.Count == 0)
+                    {
+                        SendResponse(context, "No data for given name and surname found!"u8.ToArray(), "text/plain", HttpStatusCode.NoContent);
+                        return;
+                    }
+                    _cache.AddToCache(city, weatherInfo);
                 }
-                string allInfos = String.Join(Environment.NewLine, weatherInfos);
+                allInfos += String.Join(Environment.NewLine, weatherInfo.GetRange(0, Convert.ToInt32(days)));
                 byte[] dataAsBytes = System.Text.Encoding.UTF8.GetBytes(allInfos);
                 SendResponse(context, dataAsBytes, "text/plain");
+
             }
             catch (HttpRequestException)
             {
