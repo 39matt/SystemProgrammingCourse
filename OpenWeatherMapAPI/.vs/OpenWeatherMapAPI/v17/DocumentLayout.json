@@ -5,18 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{76979866-0192-4203-83D0-F25A879B30AC}|OpenWeatherMapAPI\\OpenWeatherMapAPI.csproj|c:\\users\\matij\\onedrive - faculty of electronic engineering\\sve\\faks\\vi semestar\\sistemsko programiranje\\systemprogrammingcourse\\openweathermapapi\\openweathermapapi\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{76979866-0192-4203-83D0-F25A879B30AC}|OpenWeatherMapAPI\\OpenWeatherMapAPI.csproj|solutionrelative:openweathermapapi\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76979866-0192-4203-83D0-F25A879B30AC}|OpenWeatherMapAPI\\OpenWeatherMapAPI.csproj|c:\\users\\matij\\onedrive - faculty of electronic engineering\\sve\\faks\\vi semestar\\sistemsko programiranje\\systemprogrammingcourse\\openweathermapapi\\openweathermapapi\\cache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76979866-0192-4203-83D0-F25A879B30AC}|OpenWeatherMapAPI\\OpenWeatherMapAPI.csproj|solutionrelative:openweathermapapi\\cache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76979866-0192-4203-83D0-F25A879B30AC}|OpenWeatherMapAPI\\OpenWeatherMapAPI.csproj|c:\\users\\matij\\onedrive - faculty of electronic engineering\\sve\\faks\\vi semestar\\sistemsko programiranje\\systemprogrammingcourse\\openweathermapapi\\openweathermapapi\\weatherinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76979866-0192-4203-83D0-F25A879B30AC}|OpenWeatherMapAPI\\OpenWeatherMapAPI.csproj|solutionrelative:openweathermapapi\\weatherinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{76979866-0192-4203-83D0-F25A879B30AC}|OpenWeatherMapAPI\\OpenWeatherMapAPI.csproj|c:\\users\\matij\\onedrive - faculty of electronic engineering\\sve\\faks\\vi semestar\\sistemsko programiranje\\systemprogrammingcourse\\openweathermapapi\\openweathermapapi\\weathersearchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{76979866-0192-4203-83D0-F25A879B30AC}|OpenWeatherMapAPI\\OpenWeatherMapAPI.csproj|solutionrelative:openweathermapapi\\weathersearchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,34 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cache.cs",
-              "DocumentMoniker": "C:\\Users\\matij\\OneDrive - Faculty of Electronic Engineering\\Sve\\Faks\\VI semestar\\Sistemsko programiranje\\SystemProgrammingCourse\\OpenWeatherMapAPI\\OpenWeatherMapAPI\\Cache.cs",
-              "RelativeDocumentMoniker": "OpenWeatherMapAPI\\Cache.cs",
-              "ToolTip": "C:\\Users\\matij\\OneDrive - Faculty of Electronic Engineering\\Sve\\Faks\\VI semestar\\Sistemsko programiranje\\SystemProgrammingCourse\\OpenWeatherMapAPI\\OpenWeatherMapAPI\\Cache.cs",
-              "RelativeToolTip": "OpenWeatherMapAPI\\Cache.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T18:56:09.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WeatherInfo.cs",
-              "DocumentMoniker": "C:\\Users\\matij\\OneDrive - Faculty of Electronic Engineering\\Sve\\Faks\\VI semestar\\Sistemsko programiranje\\SystemProgrammingCourse\\OpenWeatherMapAPI\\OpenWeatherMapAPI\\WeatherInfo.cs",
-              "RelativeDocumentMoniker": "OpenWeatherMapAPI\\WeatherInfo.cs",
-              "ToolTip": "C:\\Users\\matij\\OneDrive - Faculty of Electronic Engineering\\Sve\\Faks\\VI semestar\\Sistemsko programiranje\\SystemProgrammingCourse\\OpenWeatherMapAPI\\OpenWeatherMapAPI\\WeatherInfo.cs",
-              "RelativeToolTip": "OpenWeatherMapAPI\\WeatherInfo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T13:24:21.973Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -62,22 +24,9 @@
               "RelativeDocumentMoniker": "OpenWeatherMapAPI\\HTTPServer.cs",
               "ToolTip": "C:\\Users\\matij\\OneDrive - Faculty of Electronic Engineering\\Sve\\Faks\\VI semestar\\Sistemsko programiranje\\SystemProgrammingCourse\\OpenWeatherMapAPI\\OpenWeatherMapAPI\\HTTPServer.cs",
               "RelativeToolTip": "OpenWeatherMapAPI\\HTTPServer.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAwwE0AAAB2AAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAYwDUAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-09T12:23:20.868Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WeatherSearchService.cs",
-              "DocumentMoniker": "C:\\Users\\matij\\OneDrive - Faculty of Electronic Engineering\\Sve\\Faks\\VI semestar\\Sistemsko programiranje\\SystemProgrammingCourse\\OpenWeatherMapAPI\\OpenWeatherMapAPI\\WeatherSearchService.cs",
-              "RelativeDocumentMoniker": "OpenWeatherMapAPI\\WeatherSearchService.cs",
-              "ToolTip": "C:\\Users\\matij\\OneDrive - Faculty of Electronic Engineering\\Sve\\Faks\\VI semestar\\Sistemsko programiranje\\SystemProgrammingCourse\\OpenWeatherMapAPI\\OpenWeatherMapAPI\\WeatherSearchService.cs",
-              "RelativeToolTip": "OpenWeatherMapAPI\\WeatherSearchService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T16:19:27.587Z",
               "EditorCaption": ""
             }
           ]

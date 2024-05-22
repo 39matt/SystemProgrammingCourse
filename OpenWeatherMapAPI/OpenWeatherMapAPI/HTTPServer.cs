@@ -117,43 +117,43 @@ namespace OpenWeatherMapAPI
             }
         }
 
-        public void Start()
-        {
-            _httpListener.Start();
-            _listenerThread.Start();
-            _running = true;
-            Console.WriteLine("Server pokrenut!");
-        }
-
-        public void Stop()
-        {
-            _httpListener.Stop();
-            _listenerThread.Join();
-            _running = false;
-            Console.WriteLine("Server zaustavljen!");
-        }
-
-        private void Listen()
-        {
-            while (_running)
+            public void Start()
             {
-                try
-                {
-                    var context = _httpListener.GetContext();
-                    if (_running)
-                    {
-                        ThreadPool.QueueUserWorkItem(state =>
-                        {
-                            AcceptConnection(context);
-                        });
-                    }
+                _httpListener.Start();
+                _listenerThread.Start();
+                _running = true;
+                Console.WriteLine("Server pokrenut!");
+            }
 
-                }
-                catch (HttpListenerException)
+            public void Stop()
+            {
+                _httpListener.Stop();
+                _listenerThread.Join();
+                _running = false;
+                Console.WriteLine("Server zaustavljen!");
+            }
+
+            private void Listen()
+            {
+                while (_running)
                 {
-                    Console.WriteLine("Server prestaje sa slusanjem!");
+                    try
+                    {
+                        var context = _httpListener.GetContext();
+                        if (_running)
+                        {
+                            ThreadPool.QueueUserWorkItem(state =>
+                            {
+                                AcceptConnection(context);
+                            });
+                        }
+
+                    }
+                    catch (HttpListenerException)
+                    {
+                        Console.WriteLine("Server prestaje sa slusanjem!");
+                    }
                 }
             }
-        }
     }
 }
