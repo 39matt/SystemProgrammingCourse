@@ -24,7 +24,7 @@ namespace OpenWeatherMapAPI_2
             _running = false;
         }
 
-        private static void SendResponse(HttpListenerContext context, byte[] responseBody, string contentType, HttpStatusCode statusCode = HttpStatusCode.OK)
+        private static async Task SendResponse(HttpListenerContext context, byte[] responseBody, string contentType, HttpStatusCode statusCode = HttpStatusCode.OK)
         {
             var logString =
                 $"REQUEST:\n{context.Request.HttpMethod} {context.Request.RawUrl} HTTP/{context.Request.ProtocolVersion}\n" +
@@ -36,17 +36,17 @@ namespace OpenWeatherMapAPI_2
             context.Response.ContentLength64 = responseBody.Length;
             using (Stream outputStream = context.Response.OutputStream)
             {
-                outputStream.Write(responseBody, 0, responseBody.Length);
+                await outputStream.WriteAsync(responseBody, 0, responseBody.Length);
             }
             Console.WriteLine(logString);
         }
 
-        private void AcceptConnection(HttpListenerContext context)
+        private async Task AcceptConnection(HttpListenerContext context)
         {
             var request = context.Request;
             if (request.HttpMethod != "GET")
             {
-                SendResponse(context, "Method not allowed!"u8.ToArray(), "text/plain", HttpStatusCode.MethodNotAllowed);
+                await SendResponse(context, "Method not allowed!"u8.ToArray(), "text/plain", HttpStatusCode.MethodNotAllowed);
                 return;
             }
             try
@@ -55,7 +55,7 @@ namespace OpenWeatherMapAPI_2
                 var queryParams = HttpUtility.ParseQueryString(uri.Query);
                 if (uri.ToString() == String.Empty)
                 {
-                    SendResponse(context, "No city and days given!"u8.ToArray(), "text/plain", HttpStatusCode.BadRequest);
+                    await SendResponse(context, "No city and days given!"u8.ToArray(), "text/plain", HttpStatusCode.BadRequest);
                     return;
                 }
                 if (request.RawUrl == "/favicon.ico")
@@ -66,7 +66,7 @@ namespace OpenWeatherMapAPI_2
                 var days = queryParams["cnt"]!;
                 if (!city.All(Char.IsLetter))
                 {
-                    SendResponse(context, "City can only contain letters!"u8.ToArray(), "text/plain", HttpStatusCode.UnprocessableContent);
+                    await SendResponse(context, "City can only contain letters!"u8.ToArray(), "text/plain", HttpStatusCode.UnprocessableContent);
                     return;
                 }
                 List<WeatherInfo> weatherInfo;
@@ -93,27 +93,27 @@ namespace OpenWeatherMapAPI_2
                     weatherInfo = WeatherSearchService.FetchWeatherInfo(city, days);
                     if (weatherInfo == null)
                     {
-                        SendResponse(context, "API returned an error!"u8.ToArray(), "text/plain", HttpStatusCode.InternalServerError);
+                        await SendResponse(context, "API returned an error!"u8.ToArray(), "text/plain", HttpStatusCode.InternalServerError);
                     }
                     if (weatherInfo!.Count == 0)
                     {
-                        SendResponse(context, "No data for given name and surname found!"u8.ToArray(), "text/plain", HttpStatusCode.NoContent);
+                        await SendResponse(context, "No data for given name and surname found!"u8.ToArray(), "text/plain", HttpStatusCode.NoContent);
                         return;
                     }
                     _cache.AddToCache(city, weatherInfo);
                 }
                 allInfos += String.Join(Environment.NewLine, weatherInfo.GetRange(0, Convert.ToInt32(days)));
                 byte[] dataAsBytes = System.Text.Encoding.UTF8.GetBytes(allInfos);
-                SendResponse(context, dataAsBytes, "text/plain");
+                await SendResponse(context, dataAsBytes, "text/plain");
 
             }
             catch (HttpRequestException)
             {
-                SendResponse(context, "API returned an error!"u8.ToArray(), "text/plain", HttpStatusCode.InternalServerError);
+                await SendResponse(context, "API returned an error!"u8.ToArray(), "text/plain", HttpStatusCode.InternalServerError);
             }
             catch (Exception ex)
             {
-                SendResponse(context, "Unknown error!"u8.ToArray(), "text/plain", HttpStatusCode.InternalServerError);
+                await SendResponse(context, "Unknown error!"u8.ToArray(), "text/plain", HttpStatusCode.InternalServerError);
                 throw new Exception(ex.Message);
             }
         }
@@ -134,18 +134,18 @@ namespace OpenWeatherMapAPI_2
             Console.WriteLine("Server zaustavljen!");
         }
 
-        private void Listen()
+        private async void Listen()
         {
             while (_running)
             {
                 try
                 {
-                    var context = _httpListener.GetContext();
+                    var context = await _httpListener.GetContextAsync();
                     if (_running)
                     {
-                        ThreadPool.QueueUserWorkItem(state =>
+                        ThreadPool.QueueUserWorkItem(async state =>
                         {
-                            AcceptConnection(context);
+                            await AcceptConnection(context);
                         });
                     }
 
