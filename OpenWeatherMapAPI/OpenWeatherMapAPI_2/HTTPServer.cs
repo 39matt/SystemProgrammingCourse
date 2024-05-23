@@ -75,7 +75,7 @@ namespace OpenWeatherMapAPI_2
                 {
                     if (Convert.ToInt32(days) > _cache.GetFromCache(city).Count)
                     {
-                        weatherInfo = WeatherSearchService.FetchWeatherInfo(city, days);
+                        weatherInfo = await WeatherSearchService.FetchWeatherInfo(city, days);
                         allInfos = $"First {_cache.GetFromCache(city).Count} days from cache and others added to cache\n";
                         _cache.AddToCache(city, weatherInfo);
                     }
@@ -90,7 +90,7 @@ namespace OpenWeatherMapAPI_2
                 }
                 else
                 {
-                    weatherInfo = WeatherSearchService.FetchWeatherInfo(city, days);
+                    weatherInfo = await WeatherSearchService.FetchWeatherInfo(city, days);
                     if (weatherInfo == null)
                     {
                         await SendResponse(context, "API returned an error!"u8.ToArray(), "text/plain", HttpStatusCode.InternalServerError);
