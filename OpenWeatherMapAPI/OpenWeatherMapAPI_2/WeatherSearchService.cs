@@ -13,18 +13,18 @@ namespace OpenWeatherMapAPI_2
         private static readonly string _apiKey = "7d7c4b776423f11d3fe44a90e34a78d2";
         private static readonly string _baseUrl = "http://api.openweathermap.org/data/2.5/forecast";
 
-        public static List<WeatherInfo> FetchWeatherInfo(string city, string days)
+        public static async Task<List<WeatherInfo>> FetchWeatherInfo(string city, string days)
         {
             HttpClient client = new();
             try
             {
                 client.BaseAddress = new Uri(_baseUrl);
-                var response = client.GetAsync($"?q={city}&cnt={days}&lng=sr&appid={_apiKey}").Result;
+                var response = await client.GetAsync($"?q={city}&cnt={days}&lng=sr&appid={_apiKey}");
                 if (!response.IsSuccessStatusCode)
                 {
                     throw new HttpRequestException("Greska prilikom rada sa API-em");
                 }
-                var content = response.Content.ReadAsStringAsync().Result;
+                var content = await response.Content.ReadAsStringAsync();
                 var jsonObject = JsonConvert.DeserializeObject<JObject>(content);
 
                 List<WeatherInfo> forecast = new List<WeatherInfo>();
