@@ -10,7 +10,6 @@ C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\bin\Debug\net8.0\OpenWeatherMapAPI.dll
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\bin\Debug\net8.0\OpenWeatherMapAPI.pdb
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeat.0E398A52.Up2Date
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.dll
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\refint\OpenWeatherMapAPI.dll
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.pdb
@@ -34,3 +33,4 @@ C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenW
 C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.pdb
 C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.genruntimeconfig.cache
 C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\ref\OpenWeatherMapAPI.dll
+C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\OpenWeatherMapAPI\OpenWeatherMapAPI\obj\Debug\net8.0\OpenWeatherMapAPI.csproj.CopyComplete
