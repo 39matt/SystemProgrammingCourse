@@ -143,10 +143,7 @@ namespace OpenWeatherMapAPI_2
                     var context = await _httpListener.GetContextAsync();
                     if (_running)
                     {
-                        ThreadPool.QueueUserWorkItem(async state =>
-                        {
-                            await AcceptConnection(context);
-                        });
+                        await AcceptConnection(context);
                     }
 
                 }
