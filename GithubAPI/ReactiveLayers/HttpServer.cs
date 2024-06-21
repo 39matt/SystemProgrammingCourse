@@ -1,74 +1,93 @@
 ﻿using GithubAPI;
 using System.Net;
+using System.Reactive.Concurrency;
+using System.Text;
 
 namespace GithubAPI.ReactiveLayers;
 
-public class HttpServer : IObservable<HttpListenerContext>, IDisposable
+public class HttpServer
 {
-    private readonly HttpListener _listener;
-    private readonly Thread _listenerThread;
-    private bool _disposed;
-    private readonly List<IObserver<HttpListenerContext>> _observers;
+    private readonly string url;
+    private IssueStream? issueStream;
+    private IDisposable? subscription1;
+    private IDisposable? subscription2;
+    private IDisposable? subscription3;
 
-    public HttpServer(string address = "localhost", int port = 5080)
+    public HttpServer(string url)
     {
-        _listener = new HttpListener();
-        _listener.Prefixes.Add($"http://{address}:{port}/");
-        _listenerThread = new Thread(Listen);
-        _disposed = false;
-        _observers = new List<IObserver<HttpListenerContext>>();
+        this.url = url;
     }
 
     public void Start()
     {
-        _listener.Start();
-        _listenerThread.Start();
-    }
-    private void Listen()
-    {
-        while (_listener.IsListening)
+        var listener = new HttpListener();
+        listener.Prefixes.Add(url);
+
+        listener.Start();
+        Console.WriteLine("Server started. Listening for incoming requests...");
+
+        while (true)
         {
-            try
+            var context = listener.GetContext();
+            Task.Run(() => HandleRequest(context));
+        }
+    }
+
+    private void HandleRequest(HttpListenerContext context)
+    {
+        var request = context.Request;
+        var response = context.Response;
+        byte[] buffer;
+
+        if (request.HttpMethod == "GET")
+        {
+            string username = request.QueryString["username"]!;
+            string repo = request.QueryString["repo"]!;
+
+            if (String.IsNullOrEmpty(username) || String.IsNullOrEmpty(repo))
             {
-                var context = _listener.GetContext();
-                if (_disposed) return;
-                PassContextToObservers(context);
+                response.StatusCode = (int)HttpStatusCode.BadRequest;
+                buffer = Encoding.UTF8.GetBytes("Bad request!");
+                response.ContentLength64 = buffer.Length;
+                response.OutputStream.Write(buffer, 0, buffer.Length);
+                response.OutputStream.Close();
             }
-            catch (HttpListenerException)
+            else
             {
-                break;
+
+                IScheduler scheduler = NewThreadScheduler.Default;
+
+                issueStream = new IssueStream();
+                var observer1 = new IssueObserver("Observer 1");
+                var observer2 = new IssueObserver("Observer 2");
+                var observer3 = new IssueObserver("Observer 3");
+
+                var filteredStream = issueStream;
+
+                subscription1 = filteredStream.Subscribe(observer1);
+                subscription2 = filteredStream.Subscribe(observer2);
+                subscription3 = filteredStream.Subscribe(observer3);
+
+                issueStream.GetIssues(username, repo, scheduler);
+
+                response.StatusCode = (int)HttpStatusCode.OK;
+                buffer = Encoding.UTF8.GetBytes("Request received. Processing businesses...");
+                response.ContentLength64 = buffer.Length;
+                response.OutputStream.Write(buffer, 0, buffer.Length);
+                response.OutputStream.Close();
             }
         }
-    }
-
-    private void PassContextToObservers(HttpListenerContext context)
-    {
-        foreach (var observer in _observers)
+        else
         {
-            observer.OnNext(context);
+            response.StatusCode = (int)HttpStatusCode.NotFound;
+            response.OutputStream.Close();
         }
     }
 
-    public IDisposable Subscribe(IObserver<HttpListenerContext> observer)
+    public void Stop()
     {
-        _observers.Add(observer);
-        return new Unsubscriber<HttpListenerContext>(_observers, observer);
-    }
-
-    public void Dispose()
-    {
-        Dispose(true);
-        GC.SuppressFinalize(this);
-    }
-    private void Dispose(bool disposing)
-    {
-        if (_disposed) return;
-        if (disposing)
-        {
-            _listener.Stop();
-            _listenerThread.Join();
-            _listener.Close();
-        }
-        _disposed = true;
+        subscription1!.Dispose();
+        subscription2!.Dispose();
+        subscription3!.Dispose();
     }
 }

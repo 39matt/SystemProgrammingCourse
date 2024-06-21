@@ -6,17 +6,7 @@ using GithubAPI.ReactiveLayers;
 using GitHub;
 
 
-HttpServer server = new();
+HttpServer server;
+string url = "http://localhost:8080/";
+server = new HttpServer(url);
 server.Start();
-
-Reader reader = new();
-reader.Subscribe(server);
-
-CommentAnalyzer commentAnalyzer = new();
-commentAnalyzer.Subscribe(reader);
-
-
-Console.ReadLine();
-
-reader.Unsubscribe();
-server.Dispose();
