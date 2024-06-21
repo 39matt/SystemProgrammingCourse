@@ -1,0 +1,6 @@
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\GithubAPI\obj\Debug\net8.0\GithubAPI.csproj.AssemblyReference.cache
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\GithubAPI\obj\Debug\net8.0\GithubAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\GithubAPI\obj\Debug\net8.0\GithubAPI.AssemblyInfoInputs.cache
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\GithubAPI\obj\Debug\net8.0\GithubAPI.AssemblyInfo.cs
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\GithubAPI\obj\Debug\net8.0\GithubAPI.csproj.CoreCompileInputs.cache
+C:\Users\Mihajlo\Documents\FAX\3. godina\Sistemsko\SystemProgrammingCourse\GithubAPI\obj\Debug\net8.0\GithubAPI.sourcelink.json

@@ -1,0 +1,315 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Carbon.Data.Protection/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Carbon.Data.Protection.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Carbon.Data.Protection.dll": {}
+        }
+      },
+      "Carbon.Packaging/1.50.0": {
+        "type": "package",
+        "dependencies": {
+          "Carbon.Data.Protection": "1.5.0",
+          "Carbon.Storage": "3.0.1",
+          "Carbon.Versioning": "2.0.1"
+        },
+        "compile": {
+          "lib/net5.0/Carbon.Packaging.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Carbon.Packaging.dll": {}
+        }
+      },
+      "Carbon.Storage/3.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Carbon.Storage.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Carbon.Storage.dll": {}
+        }
+      },
+      "Carbon.VersionControl/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Carbon.Storage": "3.0.1"
+        },
+        "compile": {
+          "lib/net5.0/Carbon.VersionControl.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Carbon.VersionControl.dll": {}
+        }
+      },
+      "Carbon.Versioning/2.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Carbon.Versioning.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Carbon.Versioning.dll": {}
+        }
+      },
+      "GitHub/1.34.0": {
+        "type": "package",
+        "dependencies": {
+          "Carbon.Packaging": "1.50.0",
+          "Carbon.VersionControl": "2.6.0"
+        },
+        "compile": {
+          "lib/net5.0/GitHub.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/GitHub.dll": {}
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SharpEntropy/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/SharpEntropy.dll": {}
+        },
+        "runtime": {
+          "lib/SharpEntropy.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Carbon.Data.Protection/1.5.0": {
+      "sha512": "3/+PcHtuKgBotHII1Dth0SLBhNDvu2oCec0QdlRus/oHyr25BpfyhvV7h84hWP4UQQjmvymQwM0f7jLy0Vr86w==",
+      "type": "package",
+      "path": "carbon.data.protection/1.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "carbon.data.protection.1.5.0.nupkg.sha512",
+        "carbon.data.protection.nuspec",
+        "lib/net5.0/Carbon.Data.Protection.dll",
+        "lib/netstandard2.1/Carbon.Data.Protection.dll"
+      ]
+    },
+    "Carbon.Packaging/1.50.0": {
+      "sha512": "w8QyiBSWSqgpTWmWSYe1jJHPa20i+pd+tPT0qFWvv0gsYuPkBU6zEbH9e6Y1Xr7HdT0SFEF80neWYKy0Y6yODA==",
+      "type": "package",
+      "path": "carbon.packaging/1.50.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "carbon.packaging.1.50.0.nupkg.sha512",
+        "carbon.packaging.nuspec",
+        "lib/net5.0/Carbon.Packaging.dll",
+        "lib/netstandard2.1/Carbon.Packaging.dll"
+      ]
+    },
+    "Carbon.Storage/3.0.1": {
+      "sha512": "cymUDZ3EOryvSZEG9R8aK1Q42bbmBAoh8NX+mZdXar6AqzbUiw3rC8EmDbleRl/3l+7cpVd/TDFGxZsslfPqpA==",
+      "type": "package",
+      "path": "carbon.storage/3.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "carbon.storage.3.0.1.nupkg.sha512",
+        "carbon.storage.nuspec",
+        "lib/net5.0/Carbon.Storage.dll",
+        "lib/netcoreapp3.1/Carbon.Storage.dll",
+        "lib/netstandard2.0/Carbon.Storage.dll",
+        "lib/netstandard2.1/Carbon.Storage.dll"
+      ]
+    },
+    "Carbon.VersionControl/2.6.0": {
+      "sha512": "oo+oCdcRwrwjn/4I8CwzrDjH+vcTGvr9QPjJp4HFWAba3ahWiZhCWhioumbmBxnetLENGq6w64TC/xSNwecZbg==",
+      "type": "package",
+      "path": "carbon.versioncontrol/2.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "carbon.versioncontrol.2.6.0.nupkg.sha512",
+        "carbon.versioncontrol.nuspec",
+        "lib/net5.0/Carbon.VersionControl.dll",
+        "lib/netstandard2.1/Carbon.VersionControl.dll"
+      ]
+    },
+    "Carbon.Versioning/2.0.1": {
+      "sha512": "sb5wO/BgMAMvUX6gf41h7Qhl5BkbDZbGiZxm8krEq/cNbpnH+kWlo9TJmTk/5XBB+K97xzgpk2VkBedmEl1Ewg==",
+      "type": "package",
+      "path": "carbon.versioning/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "carbon.versioning.2.0.1.nupkg.sha512",
+        "carbon.versioning.nuspec",
+        "lib/net5.0/Carbon.Versioning.dll",
+        "lib/netstandard2.0/Carbon.Versioning.dll"
+      ]
+    },
+    "GitHub/1.34.0": {
+      "sha512": "X+Rn0rMMBdxlaFIL/cZAowKcnU29/oNZ9c3p61yvgJ962LmFUjlF7c2rtqbWMmOjoWxWfdoGygc2EwIPSDUQng==",
+      "type": "package",
+      "path": "github/1.34.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "github.1.34.0.nupkg.sha512",
+        "github.nuspec",
+        "lib/net5.0/GitHub.dll",
+        "lib/netstandard2.1/GitHub.dll"
+      ]
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "SharpEntropy/1.0.0": {
+      "sha512": "LLH6MPLuvQ4SBad+Rwjse1/w5WcTaXKsDOsdiYsoeTE2Ve9vO+uTBt9/kjAufBPuR/AHPLnbHA1/UV3KBKVOdw==",
+      "type": "package",
+      "path": "sharpentropy/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/SharpEntropy.dll",
+        "sharpentropy.1.0.0.nupkg.sha512",
+        "sharpentropy.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "GitHub >= 1.34.0",
+      "Newtonsoft.Json >= 13.0.3",
+      "SharpEntropy >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Mihajlo\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Mihajlo\\Documents\\FAX\\3. godina\\Sistemsko\\SystemProgrammingCourse\\GithubAPI\\GithubAPI.csproj",
+      "projectName": "GithubAPI",
+      "projectPath": "C:\\Users\\Mihajlo\\Documents\\FAX\\3. godina\\Sistemsko\\SystemProgrammingCourse\\GithubAPI\\GithubAPI.csproj",
+      "packagesPath": "C:\\Users\\Mihajlo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mihajlo\\Documents\\FAX\\3. godina\\Sistemsko\\SystemProgrammingCourse\\GithubAPI\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Mihajlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "GitHub": {
+            "target": "Package",
+            "version": "[1.34.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
+          "SharpEntropy": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SharpEntropy 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SharpEntropy",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}
