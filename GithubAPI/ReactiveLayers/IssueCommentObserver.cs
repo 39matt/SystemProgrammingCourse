@@ -8,12 +8,13 @@ using Octokit;
 
 namespace GithubAPI.ReactiveLayers
 {
-    internal class IssueObserver : IObserver<Octokit.Issue>
+    internal class IssueCommentObserver : IObserver<Octokit.IssueComment>
     {
-        
-        private readonly string _name;
 
-        public IssueObserver(string name)
+        private readonly string _name;
+        private Octokit.IssueComment issueComment;
+
+        public IssueCommentObserver(string name)
         {
             _name = name;
         }
@@ -28,10 +29,10 @@ namespace GithubAPI.ReactiveLayers
             Console.WriteLine($"{_name}: Error happened: {error.Message}");
         }
 
-        public void OnNext(Octokit.Issue issue)
+        public void OnNext(Octokit.IssueComment issueComment)
         {
-            if (issue.Title != null)
-                Console.WriteLine($"{_name}: {issue.Title}\n-----------------\n{issue.Body}");
+            if (issueComment.Url != null)
+                Console.WriteLine($"{_name}: {issueComment.User.Name}\n-----------------\n{issueComment.Body}\n#################################");
             else return;
         }
     }

@@ -7,12 +7,11 @@ using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Reactive.Concurrency;
 using System.Net;
-using GithubAPI.Models;
 using Octokit;
 
 namespace GithubAPI.ReactiveLayers
 {
-    internal class IssueStream
+    internal class IssueStream : IObservable<Octokit.Issue>
     {
         private readonly Subject<Octokit.Issue> issueSubject;
         public IssueStream()
@@ -21,20 +20,18 @@ namespace GithubAPI.ReactiveLayers
         }
         public void GetIssues(string username, string repo, IScheduler scheduler)
         {
-            
             Observable.Start(async () =>
             {
                 try
                 {
-                    GitHubClient client = new GitHubClient(new Octokit.ProductHeaderValue("Octokit.Samples"));
+                    GitHubClient client = new GitHubClient(new Octokit.ProductHeaderValue("github"));
                     IIssuesClient issuesclient = client.Issue;
-                    var myissues = await issuesclient.GetAllForRepository("octokit", "octokit.net");
+                    var myissues = await issuesclient.GetAllForRepository(username, repo);
                     foreach (var issue in myissues)
                     {
                         issueSubject.OnNext(issue);
                     }   
                     issueSubject.OnCompleted();
-                    TopicModeling.PerformTopicModeling(myissues);
                 }
                 catch (Exception ex)
                 {

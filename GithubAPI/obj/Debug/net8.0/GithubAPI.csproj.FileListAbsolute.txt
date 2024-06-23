@@ -50,3 +50,10 @@ C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\GithubAPI\bin\Debug\net8.0\runtimes\win-arm64\native\LdaNative.dll
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\GithubAPI\bin\Debug\net8.0\runtimes\win-x64\native\LdaNative.dll
 C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\GithubAPI\bin\Debug\net8.0\runtimes\win-x86\native\LdaNative.dll
+C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\GithubAPI\bin\Debug\net8.0\Accord.dll.config
+C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\GithubAPI\bin\Debug\net8.0\Accord.dll
+C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\GithubAPI\bin\Debug\net8.0\Accord.MachineLearning.dll
+C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\GithubAPI\bin\Debug\net8.0\Accord.Math.Core.dll
+C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\GithubAPI\bin\Debug\net8.0\Accord.Math.dll
+C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\GithubAPI\bin\Debug\net8.0\Accord.Statistics.dll
+C:\Users\matij\OneDrive - Faculty of Electronic Engineering\Sve\Faks\VI semestar\Sistemsko programiranje\SystemProgrammingCourse\GithubAPI\bin\Debug\net8.0\MathNet.Numerics.dll

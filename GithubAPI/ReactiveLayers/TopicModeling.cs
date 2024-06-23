@@ -9,44 +9,51 @@ namespace GithubAPI.ReactiveLayers
 {
     internal static class TopicModeling
     {
-        public static string PerformTopicModeling(IReadOnlyList<Issue> issues)
+        public static void PerformTopicModeling(IReadOnlyList<IssueComment> issueComments, int numberOfTopics)
         {
             var mlContext = new MLContext();
 
-            // Convert Issues to Documents
-            var documents = issues.Select(i => new Document { Text = i.Title }).ToList();
+            // Convert comments to documents
+            var documents = issueComments.Select(r => new Document { Body = r.Body }).ToList();
             var data = mlContext.Data.LoadFromEnumerable(documents);
 
-            // Define the Data Processing Pipeline
+            // Define the text processing pipeline
             var textPipeline = mlContext.Transforms.Text
-                .NormalizeText("NormalizedText", nameof(Document.Text))
+                .NormalizeText("NormalizedText", "Body")
                 .Append(mlContext.Transforms.Text.TokenizeIntoWords("Tokens", "NormalizedText"))
                 .Append(mlContext.Transforms.Text.RemoveDefaultStopWords("Tokens"))
                 .Append(mlContext.Transforms.Text.ProduceWordBags("BagOfWords", "Tokens"))
-                .Append(mlContext.Transforms.Text.LatentDirichletAllocation("Topics", "BagOfWords", numberOfTopics: 2));
+                .Append(mlContext.Transforms.Text.LatentDirichletAllocation("Topics", "BagOfWords", numberOfTopics: numberOfTopics));
 
-            // Train the Model
+            // Train the model
             var model = textPipeline.Fit(data);
 
-            // Transform the Data
+            // Transform the data
             var transformedData = model.Transform(data);
 
-            // Extract and Return Topics
-            var topics = mlContext.Data.CreateEnumerable<TransformedDocument>(transformedData, reuseRowObject: false).ToList();
+            // Extract and display topics
+            var topics = mlContext.Data.CreateEnumerable<TransformedDocument>(transformedData, false);
 
-            var result = topics.Select(doc => new
+            foreach (var doc in topics)
             {
-                doc.Text,
-                Topics = doc.Topics.Select((topicWeight, index) => new { Topic = $"Topic {index + 1}", Weight = topicWeight }).ToList()
-            }).ToList();
+                Console.WriteLine($"Comment: {doc.Body}");
+                Console.WriteLine("Topics:");
 
-            return JsonSerializer.Serialize(result);
+                for (int i = 0; i < doc.Topics.Length; i++)
+                {
+                    string topicName = $"Topic {i + 1}";
+                    Console.WriteLine($"  {topicName}: {doc.Topics[i]}");
+                }
+
+                Console.WriteLine();
+            }
         }
     }
 
     public class Document
     {
-        public string Text { get; set; }
+        public string Username { get; set; }
+        public string Body { get; set; }
     }
 
     public class TransformedDocument : Document
